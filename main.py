@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired
+from flask_bootstrap import Bootstrap4
 
 
 class LoginForm(FlaskForm):
@@ -14,6 +15,7 @@ app = Flask(__name__)
 app.secret_key = "tah-secret-key"
 correct_email = "admin@email.com"
 correct_password = "123456789"
+bootstrap = Bootstrap4(app)
 
 @app.route("/")
 def home():
