@@ -4,8 +4,8 @@ from wtforms import StringField, PasswordField
 
 
 class LoginForm(FlaskForm):
-    email = StringField('Email')
-    password = PasswordField('Password')
+    email = StringField(label='Email')
+    password = PasswordField(label='Password')
 
 
 app = Flask(__name__)
